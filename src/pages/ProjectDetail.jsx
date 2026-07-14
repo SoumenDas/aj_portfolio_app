@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import KerastiqueDetail from './KerastiqueDetail';
+import StoplossDetail from './StoplossDetail';
 
 const ProjectDetail = () => {
   const { id } = useParams();
@@ -13,11 +14,15 @@ const ProjectDetail = () => {
   if (id === 'kerastique') {
     return <KerastiqueDetail />;
   }
+  
+  if (id === 'stoploss') {
+    return <StoplossDetail />;
+  }
 
-  if (id === 'vba' || id === 'stoploss') {
+  if (id === 'vba') {
     const isVba = id === 'vba';
-    const imgSrc = isVba ? "/assets/images/vba_full.jpg" : "/assets/images/stoploss_full.jpg";
-    const altText = isVba ? "VBA Application Case Study" : "Stoploss Application Case Study";
+    const imgSrc = "/assets/images/vba_full.jpg";
+    const altText = "VBA Application Case Study";
 
     return (
       <main style={{ minHeight: '100vh', paddingTop: '100px', background: 'var(--bg-primary)' }}>
