@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Analytics } from '@vercel/analytics/react';
 import NavBar from './components/NavBar';
 import Home from './pages/Home';
 import WorkPage from './pages/WorkPage';
@@ -26,6 +27,7 @@ function App() {
         <Contact />
         <ScrollToTopButton />
       </div>
+      <Analytics />
     </BrowserRouter>
   );
 }
