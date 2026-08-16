@@ -89,62 +89,64 @@ const CompanyDetail = () => {
       )}
 
       {/* Projects Showcase */}
-      <section className="page-section" style={{ paddingTop: '4rem' }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-          <h2 className="section-title" style={{ marginBottom: '3rem' }}>Key Projects & Responsibilities</h2>
-          
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '3rem' }}>
-            {data.projects.map((project, idx) => (
-              <motion.div 
-                key={idx}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: idx * 0.1 }}
-                className="win-card"
-                style={{ backdropFilter: 'blur(10px)', display: 'grid', gridTemplateColumns: '1fr', gap: '2rem' }}
-              >
-                <div>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '1rem', marginBottom: '1rem' }}>
-                    <h3 style={{ fontSize: '1.8rem', color: 'var(--text-primary)', margin: 0 }}>{project.name}</h3>
-                    <span style={{ background: 'rgba(255, 255, 255, 0.05)', border: '1px solid var(--glass-border)', padding: '0.3rem 0.8rem', borderRadius: '20px', fontSize: '0.85rem', color: 'var(--text-secondary)' }}>
-                      {project.date}
-                    </span>
-                  </div>
-                  
-                  <p style={{ fontSize: '1.1rem', color: 'var(--text-secondary)', lineHeight: '1.6', marginBottom: '1.5rem' }}>
-                    {project.summary}
-                  </p>
-
-                  {/* AI Use Highlight */}
-                  <div style={{ background: 'rgba(0, 210, 255, 0.05)', borderLeft: '4px solid var(--accent-blue)', padding: '1.5rem', borderRadius: '0 12px 12px 0', marginBottom: '2rem' }}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem', color: 'var(--accent-blue)', fontWeight: '600' }}>
-                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-                      AI Integration Strategy
+      {data.projects && data.projects.length > 0 && (
+        <section className="page-section" style={{ paddingTop: '4rem' }}>
+          <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+            <h2 className="section-title" style={{ marginBottom: '3rem' }}>Key Projects & Responsibilities</h2>
+            
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '3rem' }}>
+              {data.projects.map((project, idx) => (
+                <motion.div 
+                  key={idx}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: idx * 0.1 }}
+                  className="win-card"
+                  style={{ backdropFilter: 'blur(10px)', display: 'grid', gridTemplateColumns: '1fr', gap: '2rem' }}
+                >
+                  <div>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '1rem', marginBottom: '1rem' }}>
+                      <h3 style={{ fontSize: '1.8rem', color: 'var(--text-primary)', margin: 0 }}>{project.name}</h3>
+                      <span style={{ background: 'rgba(255, 255, 255, 0.05)', border: '1px solid var(--glass-border)', padding: '0.3rem 0.8rem', borderRadius: '20px', fontSize: '0.85rem', color: 'var(--text-secondary)' }}>
+                        {project.date}
+                      </span>
                     </div>
-                    <p style={{ margin: 0, color: 'var(--text-primary)', lineHeight: '1.5' }}>
-                      {project.aiUsage}
+                    
+                    <p style={{ fontSize: '1.1rem', color: 'var(--text-secondary)', lineHeight: '1.6', marginBottom: '1.5rem' }}>
+                      {project.summary}
                     </p>
-                  </div>
 
-                  <h4 style={{ fontSize: '1.1rem', color: 'var(--text-primary)', marginBottom: '1rem' }}>Core Responsibilities</h4>
-                  <ul style={{ color: 'var(--text-secondary)', paddingLeft: '1.2rem', margin: 0, display: 'flex', flexDirection: 'column', gap: '0.5rem', marginBottom: '2rem' }}>
-                    {project.responsibilities.map((resp, rIdx) => (
-                      <li key={rIdx} style={{ lineHeight: '1.5' }}>{resp}</li>
-                    ))}
-                  </ul>
+                    {/* AI Use Highlight */}
+                    <div style={{ background: 'rgba(0, 210, 255, 0.05)', borderLeft: '4px solid var(--accent-blue)', padding: '1.5rem', borderRadius: '0 12px 12px 0', marginBottom: '2rem' }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem', color: 'var(--accent-blue)', fontWeight: '600' }}>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                        AI Integration Strategy
+                      </div>
+                      <p style={{ margin: 0, color: 'var(--text-primary)', lineHeight: '1.5' }}>
+                        {project.aiUsage}
+                      </p>
+                    </div>
 
-                  <h4 style={{ fontSize: '1.1rem', color: 'var(--text-primary)', marginBottom: '0.75rem' }}>Tools & Execution</h4>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--text-secondary)', background: 'var(--bg-primary)', padding: '1rem', borderRadius: '12px', border: '1px solid var(--glass-border)' }}>
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-purple)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
-                    <span style={{ fontSize: '0.95rem' }}>{project.technologies}</span>
+                    <h4 style={{ fontSize: '1.1rem', color: 'var(--text-primary)', marginBottom: '1rem' }}>Core Responsibilities</h4>
+                    <ul style={{ color: 'var(--text-secondary)', paddingLeft: '1.2rem', margin: 0, display: 'flex', flexDirection: 'column', gap: '0.5rem', marginBottom: '2rem' }}>
+                      {project.responsibilities.map((resp, rIdx) => (
+                        <li key={rIdx} style={{ lineHeight: '1.5' }}>{resp}</li>
+                      ))}
+                    </ul>
+
+                    <h4 style={{ fontSize: '1.1rem', color: 'var(--text-primary)', marginBottom: '0.75rem' }}>Tools & Execution</h4>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--text-secondary)', background: 'var(--bg-primary)', padding: '1rem', borderRadius: '12px', border: '1px solid var(--glass-border)' }}>
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-purple)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                      <span style={{ fontSize: '0.95rem' }}>{project.technologies}</span>
+                    </div>
                   </div>
-                </div>
-              </motion.div>
-            ))}
+                </motion.div>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
     </motion.div>
   );
 };

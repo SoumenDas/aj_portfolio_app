@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import KerastiqueDetail from './KerastiqueDetail';
 import StoplossDetail from './StoplossDetail';
 import EVIODetail from './EVIODetail';
+import MAYODetail from './MAYODetail';
 
 const ProjectDetail = () => {
   const { id } = useParams();
@@ -11,6 +12,10 @@ const ProjectDetail = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [id]);
+
+  if (id === 'mayo') {
+    return <MAYODetail />;
+  }
 
   if (id === 'kerastique') {
     return <KerastiqueDetail />;

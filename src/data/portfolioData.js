@@ -32,7 +32,7 @@ export const portfolioData = {
     {
       id: "evio",
       title: "EVIO - VBA Portal",
-      category: "AI-Driven UX",
+      category: "Data Structure & Algorithm",
       image: "/assets/images/evio_cover.png",
       description: "Reimagining the medication experience for everyone through AI-driven Value-Based Administration.",
       tags: ["AI", "Healthcare UX", "Case Study", "Design System"]
@@ -42,14 +42,24 @@ export const portfolioData = {
       title: "Stoploss Application",
       category: "Finance",
       image: "/assets/images/stoploss_cover.png",
+      description: "E2E Stop Loss application supporting multi-tenancy with configurable workflows and analytics.",
       tags: ["Finance", "Dashboard", "UI Design"]
     },
     {
       id: "kerastique",
       title: "Kerastique",
       category: "AI-Driven UX",
-      image: "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "/assets/images/kerastique_cover.png",
+      description: "AI-powered personalized hair care e-commerce experience and intelligent consultation platform.",
       tags: ["AI", "UI/UX Design", "Case Study"]
+    },
+    {
+      id: "mayo",
+      title: "Mayo Clinic - Cohort Builder",
+      category: "Healthcare UX",
+      image: "/assets/images/mayo_cover.png",
+      description: "Clinical research and patient cohort discovery platform with advanced NLP query capabilities.",
+      tags: ["Healthcare", "NLP", "Dashboard", "Clinical UX"]
     }
   ]
 };
