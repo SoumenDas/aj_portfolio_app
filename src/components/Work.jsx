@@ -15,7 +15,7 @@ const Work = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="section-title" style={{ marginBottom: '1rem' }}>Selected Work</h2>
+            <h2 className="section-title" style={{ marginBottom: '1rem' }}>Key Projects</h2>
             <p style={{ fontSize: '1.25rem', color: 'var(--text-secondary)', maxWidth: '600px', lineHeight: '1.6' }}>
               A curated selection of high-impact platforms optimized for enterprise scale and AI integration.
             </p>
