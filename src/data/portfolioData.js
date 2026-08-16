@@ -59,7 +59,7 @@ export const portfolioData = {
       category: "Healthcare UX",
       image: "/assets/images/mayo_cover.png",
       description: "Clinical research and patient cohort discovery platform with advanced NLP query capabilities.",
-      tags: ["Healthcare", "NLP", "Dashboard", "Clinical UX"]
+      tags: ["Healthcare UX", "NLP", "Dashboard", "Clinical Case Study"]
     }
   ]
 };
