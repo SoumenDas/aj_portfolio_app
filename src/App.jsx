@@ -6,7 +6,7 @@ import Home from './pages/Home';
 import WorkPage from './pages/WorkPage';
 import ProjectDetail from './pages/ProjectDetail';
 import CompanyDetail from './pages/CompanyDetail';
-import VBADetail from './pages/VBADetail';
+import EVIODetail from './pages/EVIODetail';
 import Contact from './components/Contact';
 import ScrollToTopButton from './components/ScrollToTopButton';
 import ScrollHandler from './components/ScrollHandler';
@@ -20,7 +20,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/work" element={<WorkPage />} />
-          <Route path="/work/vba" element={<VBADetail />} />
+          <Route path="/work/evio" element={<EVIODetail />} />
+          <Route path="/work/vba" element={<EVIODetail />} />
           <Route path="/work/:id" element={<ProjectDetail />} />
           <Route path="/career/:companyId" element={<CompanyDetail />} />
         </Routes>

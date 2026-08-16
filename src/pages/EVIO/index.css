@@ -1,0 +1,85 @@
+@import 'tailwindcss';
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('https://static.figma.com/font/Poppins-Regular_6') format('woff2');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('https://static.figma.com/font/Poppins-Medium_6') format('woff2');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('https://static.figma.com/font/Poppins-SemiBold_6') format('woff2');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('https://static.figma.com/font/Poppins-Bold_6') format('woff2');
+}
+
+@theme {
+  --font-sans: 'Poppins', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0f0c1a;
+}
+::-webkit-scrollbar-thumb {
+  background: #4a4073;
+  border-radius: 3px;
+}
+
+@keyframes float-fish-1 {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  33% { transform: translate(80px, -60px) rotate(15deg); }
+  66% { transform: translate(-40px, -120px) rotate(-10deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+@keyframes float-fish-2 {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  33% { transform: translate(-100px, 80px) rotate(-20deg); }
+  66% { transform: translate(60px, 140px) rotate(12deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+@keyframes float-fish-3 {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  33% { transform: translate(120px, 40px) rotate(25deg); }
+  66% { transform: translate(-80px, 90px) rotate(-15deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+@keyframes float-fish-3d {
+  0% { transform: translate(0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+  33% { transform: translate(30vw, -20vh) rotateX(180deg) rotateY(120deg) rotateZ(45deg); }
+  66% { transform: translate(-20vw, 40vh) rotateX(360deg) rotateY(240deg) rotateZ(-30deg); }
+  100% { transform: translate(0, 0) rotateX(540deg) rotateY(360deg) rotateZ(0deg); }
+}
+
+.float-fish-1 { animation: float-fish-1 25s infinite ease-in-out alternate; }
+.float-fish-2 { animation: float-fish-2 32s infinite ease-in-out alternate; }
+.float-fish-3 { animation: float-fish-3 28s infinite ease-in-out alternate; }
+.float-fish-3d { animation: float-fish-3d 40s infinite linear; }
