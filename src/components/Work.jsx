@@ -141,9 +141,9 @@ const ProjectGridCard = ({ project, idx }) => (
           <img src={project.image} alt={project.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
           <div style={{ position: 'absolute', top: '1rem', right: '1rem', background: 'rgba(0,0,0,0.5)', backdropFilter: 'blur(10px)', padding: '0.4rem 1rem', borderRadius: '30px', fontSize: '0.75rem', color: 'var(--accent-blue)', fontWeight: 'bold' }}>{project.category}</div>
         </div>
-        <div style={{ padding: '2rem', flex: 1 }}>
-          <h3 style={{ fontSize: '1.8rem', color: 'var(--text-primary)', marginBottom: '1rem', fontWeight: '800' }}>{project.title}</h3>
-          <p style={{ color: 'var(--text-secondary)', lineHeight: '1.7', marginBottom: '2rem' }}>{project.description || `Enterprise-grade ${project.category.toLowerCase()} solution optimized for scalability.`}</p>
+        <div style={{ padding: '1.75rem 2rem 2rem 2rem', flex: 1, display: 'flex', flexDirection: 'column' }}>
+          <h3 style={{ fontSize: '1.75rem', color: 'var(--text-primary)', marginBottom: '0.5rem', fontWeight: '800' }}>{project.title}</h3>
+          <p style={{ color: 'var(--text-secondary)', lineHeight: '1.6', marginBottom: '1.5rem', flex: 1 }}>{project.description || `Enterprise-grade ${project.category.toLowerCase()} solution optimized for scalability.`}</p>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.6rem' }}>
             {project.tags.map(tag => (
               <span key={tag} style={{ fontSize: '0.75rem', color: 'var(--text-secondary)', background: 'rgba(255,255,255,0.05)', padding: '0.3rem 0.8rem', borderRadius: '4px' }}>{tag}</span>
