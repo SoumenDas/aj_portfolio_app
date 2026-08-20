@@ -9,8 +9,8 @@ const NavBar = () => {
         <Link to="/" className="nav-brand gradient-text">AJ</Link>
         <div className="nav-links">
           <HashLink smooth to="/#hero" className="nav-link">Home</HashLink>
-          <HashLink smooth to="/#impact" className="nav-link">Impact</HashLink>
           <HashLink smooth to="/#about" className="nav-link">About</HashLink>
+          <HashLink smooth to="/#achievements" className="nav-link">Achievements</HashLink>
           <Link to="/work" className="nav-link">Work</Link>
           <HashLink smooth to="/#skills" className="nav-link">Skills</HashLink>
           <HashLink smooth to="/#career" className="nav-link">Career</HashLink>

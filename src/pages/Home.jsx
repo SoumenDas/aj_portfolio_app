@@ -1,8 +1,8 @@
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import Hero from '../components/Hero';
-import Impact from '../components/Impact';
 import About from '../components/About';
+import Achievements from '../components/Achievements';
 import Skills from '../components/Skills';
 import Tools3D from '../components/Tools3D';
 import CareerTimeline from '../components/CareerTimeline';
@@ -33,12 +33,12 @@ const Home = () => {
       
       <Hero />
       
-      <ParallaxSection offset={30}>
-        <Impact />
-      </ParallaxSection>
-      
       <ParallaxSection offset={20}>
         <About />
+      </ParallaxSection>
+      
+      <ParallaxSection offset={25}>
+        <Achievements />
       </ParallaxSection>
       
       <ParallaxSection offset={30}>
